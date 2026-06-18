@@ -21,6 +21,44 @@
   @keyframes pulsering { 0% { box-shadow: 0 0 0 0 rgba(8,192,189,0.35); } 70% { box-shadow: 0 0 0 14px rgba(8,192,189,0); } 100% { box-shadow: 0 0 0 0 rgba(8,192,189,0); } }
   @keyframes caretblink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
   @keyframes heroFade { 0%, 29.17% { opacity: 1; } 33.33% { opacity: 0; } 95.83% { opacity: 0; } 100% { opacity: 1; } }
+
+  @media (max-width: 768px) {
+    /* Nav */
+    nav { padding: 12px 16px !important; gap: 10px !important; }
+    .r-nav-links { display: none !important; }
+    .r-nav-switcher { display: none !important; }
+
+    /* Hero */
+    .r-hero-content { padding: 76px 16px 154px !important; }
+    #top h1 { font-size: 36px !important; line-height: 1.1 !important; }
+    .r-chip-tr { display: none !important; }
+    .r-chip-br { left: 16px !important; right: 16px !important; bottom: 16px !important; max-width: none !important; }
+
+    /* Section padding */
+    #stats { padding-left: 16px !important; padding-right: 16px !important; }
+    #how   { padding-left: 16px !important; padding-right: 16px !important; }
+    #story > div { padding-left: 16px !important; padding-right: 16px !important; }
+    #story h2 { font-size: 28px !important; }
+    #cases > div { padding-left: 16px !important; padding-right: 16px !important; }
+    #articles { padding-left: 16px !important; padding-right: 16px !important; }
+    #news { padding-left: 16px !important; padding-right: 16px !important; }
+    #partner { padding-left: 16px !important; padding-right: 16px !important; }
+    footer > div { padding-left: 16px !important; padding-right: 16px !important; }
+
+    /* Grids */
+    .r-stats    { grid-template-columns: repeat(2,1fr) !important; }
+    .r-story    { grid-template-columns: 1fr !important; }
+    .r-how      { grid-template-columns: repeat(2,1fr) !important; }
+    .r-cases    { grid-template-columns: 1fr !important; }
+    .r-articles { grid-template-columns: 1fr !important; }
+    .r-news     { grid-template-columns: 1fr !important; }
+    .r-videos   { grid-template-columns: 1fr 1fr !important; }
+    .r-cta      { grid-template-columns: 1fr !important; padding: 44px 16px !important; }
+    .r-footer   { grid-template-columns: 1fr 1fr !important; }
+
+    /* CTA heading */
+    #donate h2 { font-size: 28px !important; }
+  }
 </style>
 </helmet>
 
@@ -33,7 +71,7 @@
         <img src="assets/aalogo.png" alt="Andrea" style="width:34px; height:34px; object-fit:contain; display:block;">
         <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; letter-spacing:-0.02em;">Andrea</span>
       </a>
-      <div style="display:flex; align-items:center; gap:26px; margin-left:8px;">
+      <div class="r-nav-links" style="display:flex; align-items:center; gap:26px; margin-left:8px;">
         <a href="#cases" style="text-decoration:none; color:#0A1F1C; font-size:14.5px; font-weight:500;" style-hover="color:#08C0BD;">Browse Cases</a>
         <a href="#how" style="text-decoration:none; color:#0A1F1C; font-size:14.5px; font-weight:500;" style-hover="color:#08C0BD;">How it Works</a>
         <a href="#story" style="text-decoration:none; color:#0A1F1C; font-size:14.5px; font-weight:500;" style-hover="color:#08C0BD;">About</a>
@@ -41,7 +79,7 @@
         <a href="#partner" style="text-decoration:none; color:#0A1F1C; font-size:14.5px; font-weight:500;" style-hover="color:#08C0BD;">Partner</a>
       </div>
       <div style="margin-left:auto; display:flex; align-items:center; gap:18px;">
-        <div style="display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#08C0BD; text-transform:uppercase; letter-spacing:0.04em;">
+        <div class="r-nav-switcher" style="display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#08C0BD; text-transform:uppercase; letter-spacing:0.04em;">
           <a href="#" style="color:#3a564f; text-decoration:none;" style-hover="color:#08C0BD;">Individual</a>
           <span style="opacity:0.4;">/</span>
           <a href="#" style="color:#3a564f; text-decoration:none;" style-hover="color:#08C0BD;">NGO</a>
@@ -70,7 +108,7 @@
     </svg>
 
     <!-- content -->
-    <div style="position:relative; max-width:1240px; margin:0 auto; padding:108px 32px 56px; width:100%; display:flex; flex-direction:column; justify-content:center;">
+    <div class="r-hero-content" style="position:relative; max-width:1240px; margin:0 auto; padding:108px 32px 56px; width:100%; display:flex; flex-direction:column; justify-content:center;">
       <div style="max-width:620px;">
         <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(127,217,205,0.12); border:1px solid rgba(127,217,205,0.3); color:#9fe7da; padding:7px 14px; border-radius:999px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.03em; text-transform:uppercase; backdrop-filter:blur(4px);">
           <span style="width:7px; height:7px; border-radius:50%; background:#5cd6a9; display:inline-block; animation:blip 2.6s infinite;"></span>
@@ -101,7 +139,7 @@
     </div>
 
     <!-- top-right verified hospital chip -->
-    <div style="position:absolute; top:96px; right:32px; display:inline-flex; align-items:center; gap:8px; background:rgba(247,245,239,0.92); backdrop-filter:blur(6px); padding:8px 13px; border-radius:11px; box-shadow:0 8px 24px -10px rgba(0,0,0,0.45);">
+    <div class="r-chip-tr" style="position:absolute; top:96px; right:32px; display:inline-flex; align-items:center; gap:8px; background:rgba(247,245,239,0.92); backdrop-filter:blur(6px); padding:8px 13px; border-radius:11px; box-shadow:0 8px 24px -10px rgba(0,0,0,0.45);">
       <span style="width:24px; height:24px; border-radius:7px; background:rgba(8,192,189,0.14); display:flex; align-items:center; justify-content:center; flex:none;">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#08C0BD" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
@@ -112,7 +150,7 @@
     </div>
 
     <!-- bottom-right funds-released ledger chip -->
-    <div style="position:absolute; right:32px; bottom:36px; display:flex; align-items:center; gap:13px; background:#08C0BD; backdrop-filter:blur(8px); padding:13px 16px; border-radius:13px; border:1px solid rgba(255,255,255,0.3); max-width:360px;">
+    <div class="r-chip-br" style="position:absolute; right:32px; bottom:36px; display:flex; align-items:center; gap:13px; background:#08C0BD; backdrop-filter:blur(8px); padding:13px 16px; border-radius:13px; border:1px solid rgba(255,255,255,0.3); max-width:360px;">
       <span style="width:32px; height:32px; border-radius:9px; background:#ffffff; display:flex; align-items:center; justify-content:center; flex:none;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#03413F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
@@ -127,7 +165,7 @@
   </section>
 
   <!-- ===================== IMPACT STATS ===================== -->
-  <section style="max-width:1240px; margin:0 auto; padding:48px 32px;">
+  <section id="stats" style="max-width:1240px; margin:0 auto; padding:48px 32px;">
     <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:26px;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#08C0BD;">This is chapter one</div>
@@ -135,7 +173,7 @@
       </div>
       <p style="font-size:14.5px; color:#5a6a63; max-width:330px; margin:0;">We're new, and we won't inflate our impact. Every figure below is traceable to a released, verified case.</p>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+    <div class="r-stats" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
       <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
         <div style="background:#fff; border:1px solid rgba(10,31,28,0.07); border-radius:14px; padding:24px;">
           <div style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:38px; letter-spacing:-0.02em; color:#0A1F1C;">{{ s.value }}</div>
@@ -177,7 +215,7 @@
             stroke="#ffffff" stroke-opacity="0.5" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"
             stroke-dasharray="14 8" style="animation:ecgflow 18s linear infinite;"/>
         </svg>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:8px;">
+        <div class="r-story" style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:8px;">
           <!-- 2023 -->
           <div style="background:rgba(242,169,59,0.20); border:1px solid rgba(242,169,59,0.6); border-radius:16px; padding:28px;">
             <div style="display:flex; align-items:center; gap:12px;">
@@ -215,7 +253,7 @@
     </div>
     <div style="position:relative; margin-top:48px;">
       <svg width="100%" height="24" viewBox="0 0 1000 24" preserveAspectRatio="none" style="position:absolute; top:30px; left:0; opacity:0.5;"><path d="M0 12 H1000" stroke="#08C0BD" stroke-width="1.5" stroke-dasharray="5 6"/></svg>
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px; position:relative;">
+      <div class="r-how" style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px; position:relative;">
         <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
           <div style="background:#fff; border:1px solid rgba(10,31,28,0.07); border-radius:14px; padding:26px 22px;">
             <div style="width:46px; height:46px; border-radius:12px; background:#08C0BD; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:18px;">{{ st.n }}</div>
@@ -237,7 +275,7 @@
         </div>
         <a href="#" style="text-decoration:none; color:#08C0BD; font-weight:600; font-size:15px; display:inline-flex; align-items:center; gap:7px;" style-hover="gap:11px;">View all cases <span>→</span></a>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:32px;">
+      <div class="r-cases" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:32px;">
         <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
           <div style="background:#fff; border:1px solid rgba(10,31,28,0.07); border-radius:16px; overflow:hidden; display:flex; flex-direction:column;" style-hover="box-shadow:0 18px 40px -24px rgba(10,31,28,0.4); transform:translateY(-3px);">
             <div style="position:relative; height:160px; background:repeating-linear-gradient(135deg,#e7e3d7,#e7e3d7 11px,#ded9cb 11px,#ded9cb 22px); display:flex; align-items:flex-end; padding:12px;">
@@ -277,7 +315,7 @@
       </div>
       <a href="https://medium.com/@andreaaidint" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#08C0BD; font-weight:600; font-size:15px; display:inline-flex; align-items:center; gap:7px;">Read all on Medium <span>→</span></a>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+    <div class="r-articles" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
       <sc-for list="{{ articles }}" as="art" hint-placeholder-count="3">
         <a href="{{ art.url }}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; flex-direction:column; background:#fff; border:1px solid rgba(10,31,28,0.07); border-radius:16px; overflow:hidden;" style-hover="box-shadow:0 18px 40px -24px rgba(10,31,28,0.4); transform:translateY(-3px);">
           <div style="height:200px; overflow:hidden; background:#cfe9e6; flex:none;">
@@ -299,11 +337,11 @@
 
   <!-- ===================== TESTIMONIALS + SOCIAL ===================== -->
   <section id="news" style="max-width:1240px; margin:0 auto; padding:80px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:start;">
+    <div class="r-news" style="display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:start;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#08C0BD;">Voices</div>
         <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; letter-spacing:-0.025em; margin:10px 0 22px;">Hear it from the families.</h2>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+        <div class="r-videos" style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
           <sc-for list="{{ videos }}" as="v" hint-placeholder-count="2">
             <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(10,31,28,0.08);">
               <div style="position:relative; height:180px; background:repeating-linear-gradient(135deg,#dfe6e2,#dfe6e2 11px,#d4ddd8 11px,#d4ddd8 22px); display:flex; align-items:center; justify-content:center;">
@@ -338,7 +376,7 @@
 
   <!-- ===================== FINAL CTA BAND ===================== -->
   <section id="donate" style="background:#08C0BD; color:#fff;">
-    <div style="max-width:1240px; margin:0 auto; padding:66px 32px; display:grid; grid-template-columns:1.3fr 0.7fr; gap:40px; align-items:center;">
+    <div class="r-cta" style="max-width:1240px; margin:0 auto; padding:66px 32px; display:grid; grid-template-columns:1.3fr 0.7fr; gap:40px; align-items:center;">
       <div>
         <svg width="280" height="30" viewBox="0 0 280 30" fill="none" preserveAspectRatio="none" style="margin-bottom:18px; max-width:100%;">
           <path d="M0 15 H80 L92 15 L102 3 L112 27 L120 15 H170 L180 15 L188 11 L196 15 L206 2 L216 28 L224 15 H280" stroke="#F2A93B" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -356,7 +394,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer style="background:#ffffff; color:#5a6a63; padding:60px 0 34px; border-top:1px solid rgba(10,31,28,0.08);">
     <div style="max-width:1240px; margin:0 auto; padding:0 32px;">
-      <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:32px;">
+      <div class="r-footer" style="display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:32px;">
         <div>
           <div style="display:flex; align-items:center; gap:10px;">
             <img src="assets/aalogo.png" alt="Andrea" style="width:34px; height:34px; object-fit:contain; display:block;">
